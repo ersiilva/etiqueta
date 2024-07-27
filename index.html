@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do Produto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f4f6;
+            margin: 0;
+            margin-top: 0;
+        }
+        body h1 {
+            font-size: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            padding: 8px;
+            width: calc(100% - 16px);
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 20px;
+                font-size: 18px;
+                display: block;
+            }
+            .container {
+                display: none;
+            }
+            #printContent {
+                display: block;
+                text-align: left;
+                margin: 0;
+            }
+        }
+        #printContent {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Informações do Produto</h1>
+        <div class="form-group">
+            <label for="productName">Nome do Produto:</label>
+            <input type="text" id="productName" name="productName">
+        </div>
+        <div class="form-group">
+            <label for="manufactureDate">Data de Fabricação:</label>
+            <input type="date" id="manufactureDate" name="manufactureDate">
+        </div>
+        <div class="form-group">
+            <label for="expiryDate">Data de Validade:</label>
+            <input type="date" id="expiryDate" name="expiryDate">
+        </div>
+        <div class="form-group">
+            <label for="productWeight">Peso:</label>
+            <input type="text" id="productWeight" name="productWeight">
+        </div>
+        <button onclick="printInfo()">Imprimir Informações</button>
+    </div>
+
+    <div id="printContent"></div>
+
+    <script>
+        function formatDate(dateString) {
+            const [year, month, day] = dateString.split('-');
+            return `${day}/${month}/${year}`;
+        }
+
+        function printInfo() {
+            const productName = document.getElementById('productName').value;
+            const manufactureDate = formatDate(document.getElementById('manufactureDate').value);
+            const expiryDate = formatDate(document.getElementById('expiryDate').value);
+            const productWeight = document.getElementById('productWeight').value;
+
+            const printContent = `
+                <div style="text-align: center;">
+                    <h1>88 SMASH</h1>
+                </div>
+                <div style="text-align: center;">   
+                    <p><strong></strong> ${productName}</p>
+                </div>
+                <div style="text-align: center;">
+                    <p><strong>DATA:</strong> ${manufactureDate}</p>
+                </div>
+                <div style="text-align: center;">   
+                    <p><strong>VAL:</strong> ${expiryDate}</p>
+                </div>
+                <div style="text-align: center;">
+                    <p><strong>Peso:</strong> ${productWeight}</p>
+                </div>
+            `;
+
+            const printDiv = document.getElementById('printContent');
+            printDiv.innerHTML = printContent;
+            printDiv.style.display = 'block';
+
+            window.print();
+
+            // Hide print content after printing
+            printDiv.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
