@@ -65,3 +65,28 @@ button:hover {
 #printContent {
     display: none;
 }
+#projeto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    flex-direction: row;
+    color: #CCCCCC;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top:1rem;
+}
+#projeto1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    flex-direction: row;
+    color: #CCCCCC;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+}
