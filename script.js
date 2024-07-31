@@ -23,7 +23,10 @@ function printInfo() {
             <p><strong>VAL:</strong> ${expiryDate}</p>
         </div>
         <div style="text-align: center;">
-            <p><strong>Peso:</strong> ${productWeight}</p>
+            <p><strong>Peso:</strong> ${productWeight} Kg </p>
+        </div>
+        <div style="text-align: center;font-size: 15px;justify-content: center">
+            <p>Deus é Bom!</p>
         </div>
     `;
 
