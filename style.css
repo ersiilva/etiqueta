@@ -90,7 +90,7 @@ button:hover {
     }
 }
 #printContent {
-    display:;
+    display:none;
 }
 #projeto {
     display: flex;
