@@ -1,13 +1,27 @@
+function formatWeight(input) {
+    let value = input.value.replace(',', '.'); // Troca vírgula por ponto
+    value = value.replace(/[^0-9.]/g, ''); // Permite apenas números e ponto
+
+    const parts = value.split('.');
+    if (parts.length > 2) {
+        value = parts[0] + '.' + parts.slice(1).join('');
+    }
+
+    input.value = value; // Mantém o valor digitado sem truncar
+}
+
+// Função para formatar a data
 function formatDate(dateString) {
     const [year, month, day] = dateString.split('-');
     return `${day}/${month}/${year}`;
 }
 
+// Função para gerar e imprimir as informações
 function printInfo() {
     const productName = document.getElementById('productName').value;
     const manufactureDate = formatDate(document.getElementById('manufactureDate').value);
     const expiryDate = formatDate(document.getElementById('expiryDate').value);
-    const productWeight = document.getElementById('productWeight').value;
+    const productWeight = parseFloat(document.getElementById('productWeight').value || 0).toFixed(3);
 
     const printContent = `
         <div style="text-align: center;">
@@ -36,6 +50,6 @@ function printInfo() {
 
     window.print();
 
-    // Hide print content after printing
+    // Ocultar novamente após a impressão
     printDiv.style.display = 'none';
 }
