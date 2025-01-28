@@ -64,6 +64,9 @@ button {
 button:hover {
     background-color: #2A508F;
 }
+#productName {
+    text-transform: uppercase; /* Exibe sempre em maiúsculas */
+}
 @media print {
     body {
         margin: 0;
