@@ -87,10 +87,10 @@ button:hover {
     flex-wrap: wrap;
     align-content: flex-end;
     flex-direction: row;
-    color: #CCCCCC;
+    color: #939393;
     font-style: normal;
-    font-weight: 400;
-    font-size: 0.90rem;
+    font-weight: 500;
+    font-size: 0.95rem;
     margin-top:1rem;
 }
 #projeto1 {
@@ -99,10 +99,10 @@ button:hover {
     flex-wrap: wrap;
     align-content: flex-end;
     flex-direction: row;
-    color: #CCCCCC;
+    color: #939393;
     font-style: normal;
-    font-weight: 400;
-    font-size: 0.85rem;
+    font-weight: 500;
+    font-size: 0.90rem;
     margin: 0;
     padding: 0;
 }
