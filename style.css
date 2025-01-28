@@ -74,18 +74,23 @@ button:hover {
         font-size: 18px;
         display: block;
         line-height: 10px;
+        background-color: #fff; /* Remove o fundo ao imprimir */
+        margin: 0;
+    }
+    .form-container {
+        display: none; /* Oculta o formulário durante a impressão */
     }
     .container {
         display: none;
     }
     #printContent {
         display: block;
-        text-align: left;
+        text-align: center;
         margin: 0;
     }
 }
 #printContent {
-    display: none;
+    display:;
 }
 #projeto {
     display: flex;
