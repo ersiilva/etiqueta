@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressão de Produto</title>
+    <style>
+        /* Configurações de estilo para impressão e layout responsivo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .form-group {
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilo para área de impressão */
+        @media print {
+            body {
+                background-color: #fff;
+                margin: 0;
+            }
+            .form-container {
+                display: none; /* Oculta o formulário ao imprimir */
+            }
+            #printContent {
+                display: block !important;
+                text-align: center;
+            }
+        }
+
+        #printContent {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-group">
+            <label for="productName">Nome do Produto:</label>
+            <input 
+                type="text" 
+                id="productName" 
+                name="productName" 
+                placeholder="Digite o nome do produto" 
+                maxlength="100" 
+                required 
+                oninput="this.value = this.value.toUpperCase()">
+        </div>
+        <div class="form-group">
+            <label for="manufactureDate">Data de Fabricação:</label>
+            <input type="date" id="manufactureDate" name="manufactureDate" required>
+        </div>
+        <div class="form-group">
+            <label for="expiryDate">Data de Validade:</label>
+            <input type="date" id="expiryDate" name="expiryDate" required>
+        </div>
+        <div class="form-group">
+            <label for="productWeight">Peso (Kg):</label>
+            <input 
+                type="text" 
+                id="productWeight" 
+                name="productWeight" 
+                placeholder="Digite o peso do produto" 
+                oninput="formatWeight(this)">
+        </div>
+        <button onclick="printInfo()">Imprimir</button>
+    </div>
+
+    <div id="printContent"></div>
+
+    <script>
+        // Função para formatar o peso digitado
+        function formatWeight(input) {
+            let value = input.value.replace(',', '.'); // Troca vírgula por ponto
+            value = value.replace(/[^0-9.]/g, ''); // Permite apenas números e ponto
+
+            const parts = value.split('.');
+            if (parts.length > 2) {
+                value = parts[0] + '.' + parts.slice(1).join('');
+            }
+
+            input.value = value; // Mantém o valor digitado sem truncar
+        }
+
+        // Função para formatar a data
+        function formatDate(dateString) {
+            const [year, month, day] = dateString.split('-');
+            return `${day}/${month}/${year}`;
+        }
+
+        // Função para gerar e imprimir as informações
+        function printInfo() {
+            const productName = document.getElementById('productName').value;
+            const manufactureDate = formatDate(document.getElementById('manufactureDate').value);
+            const expiryDate = formatDate(document.getElementById('expiryDate').value);
+            const productWeight = parseFloat(document.getElementById('productWeight').value || 0).toFixed(3);
+
+            const printContent = `
+                <div>
+                    <h1>88 SMASH</h1>
+                    <p><strong>${productName}</strong></p>
+                    <p><strong>DATA:</strong> ${manufactureDate}</p>
+                    <p><strong>VAL:</strong> ${expiryDate}</p>
+                    <p><strong>Peso:</strong> ${productWeight} Kg</p>
+                    <p>Deus é Bom!</p>
+                </div>
+            `;
+
+            const printDiv = document.getElementById('printContent');
+            printDiv.innerHTML = printContent;
+            printDiv.style.display = 'block';
+
+            window.print();
+
+            // Ocultar novamente após a impressão
+            printDiv.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
