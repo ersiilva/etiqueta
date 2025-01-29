@@ -37,8 +37,7 @@ body h1 {
     position: absolute;
     max-width: 70%;
 }
-.forme-container
- {
+.forme-container{
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.131);
   box-shadow: 0 8px 32px 0 rgba(132, 132, 132, 0.109);
@@ -114,11 +113,19 @@ button:hover {
     flex-wrap: wrap;
     align-content: flex-end;
     flex-direction: row;
-    color: #939393;
+    color: #ffffffbb;
     font-style: normal;
     font-weight: 500;
     font-size: 0.95rem;
-    margin-top:1rem;
+    margin-top:5px;
+    margin-bottom: -10px;
+}
+.calculadora{
+    align-items: center; 
+    text-decoration: none; 
+    color: white;
+    font-family: 'Poppins';
+    margin-top: 10px;
 }
 #projeto1 {
     display: flex;
@@ -126,7 +133,7 @@ button:hover {
     flex-wrap: wrap;
     align-content: flex-end;
     flex-direction: row;
-    color: #939393;
+    color: #ffffffbb;
     font-style: normal;
     font-weight: 500;
     font-size: 0.90rem;
