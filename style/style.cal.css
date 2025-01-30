@@ -127,8 +127,8 @@ button:last-of-type:hover {
     color: #ffffffbb;
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
-    margin-top: 5px;
+    font-size: 0.95rem;
+    margin-top: 1px;
     margin-bottom: 0;
 }
 #projeto1 {
