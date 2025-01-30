@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+    margin: 0;
+    margin-top: 0; 
+}
+    */
+body {
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background: url('../img/88smash-escuro.png') no-repeat center center fixed;
+        background-size: cover;
+    }
+body h1 {
+    font-size: 25px;
+}
+.forme-container {
+    background-color: #fff;
+    padding: 20px;
+    padding-left: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    width: 350px;
+    margin-top: 0;
+    position: absolute;
+    max-width: 70%;
+}
+.forme-container{
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.131);
+  box-shadow: 0 8px 32px 0 rgba(132, 132, 132, 0.109);
+  color: #fff;
+-webkit-backdrop-filter
+: blur( px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.form-group {
+    margin-bottom: 10px;
+    text-align: left;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input {
+    padding: 10px;
+    width: calc(100% - 16px);
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+}
+
+button {
+    padding: 10px 15px;
+    background-color:  #2961bb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #2A508F;
+}
+#productName {
+    text-transform: uppercase; /* Exibe sempre em maiúsculas */
+}
+@media print {
+    body {
+        margin: 0;
+        padding: 20px;
+        font-size: 18px;
+        display: block;
+        line-height: 10px;
+        background-color: #fff; /* Remove o fundo ao imprimir */
+        margin: 0;
+    }
+    .form-container {
+        display: none; /* Oculta o formulário durante a impressão */
+    }
+    .forme-container {
+        display: none;
+    }
+    #printContent {
+        display: block !important; /* Mostra apenas o conteúdo formatado */
+        text-align: center;
+        margin: 0;
+    }
+}
+#printContent {
+    display:none;
+    margin-top: 20px;
+}
+#projeto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    flex-direction: row;
+    color: #ffffffbb;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-top:5px;
+    margin-bottom: -10px;
+}
+.calculadora{
+    align-items: center; 
+    text-decoration: none; 
+    color: white;
+    font-family: 'Poppins';
+    margin-top: 15px;
+}
+#projeto1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    flex-direction: row;
+    color: #ffffffbb;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.90rem;
+    margin: 0;
+    padding: 0;
+}

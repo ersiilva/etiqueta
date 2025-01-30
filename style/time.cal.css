@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.relogio-container {
+    font-family: "Poppins", sans-serif;
+    width: 110%;
+    color: #fff;
+    display: inline-block;
+    
+}
+
+.relogio {
+    display: flex;
+    letter-spacing: 4px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
+.horario {
+    font-size: 18px;
+}
+.img-time img{
+    display: flex;
+    flex-direction: row;
+    margin-right: 3px;
+    filter: brightness(10) contrast(10) invert(100%);
+    width: 18px;
+    height: auto;
+}
+.burgue{
+    display: flex;
+    flex-direction: row;
+    margin-right: 3px;
+    width: 100%;
+    height: auto;
+}
+.burgue img{
+    display: flex;
+    flex-direction: row;
+    margin-right: 3px;
+    filter: brightness(10) contrast(10) invert(100%);
+    width: 30px;
+    height: auto;
+}
+
+.minutos {
+    font-size: 18px;
+}
+
+.segundos {
+    font-size: 18px;
+}
+
+.periodo {
+    
+    vertical-align: middle;
+    color: #888;
+}
