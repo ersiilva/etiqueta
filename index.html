@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etiqueta</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/time.et.css">
+    <link rel="shortcut icon" href="../img/favicon-16x16.png" type="image/x-icon">
     
 </head>
 <body>
         <div class="forme-container">
-            <h1>Crie sua Etiqueta</h1>
+            <div class="time">
+                <div class="relogio-container">
+                    <div class="relogio">
+                        <div class="burgue"><img src="/img/hamburger.png" alt="" draggable="false"></div>
+                        <div class="img-time"><img src="/img/relogio 128px.png" alt="" draggable="false"></div>
+                        <span class="horario" id="horas">00</span> :
+                        <span class="minutos" id="minutos">00</span>
+                        <!--<span class="segundos" id="segundos">00</span>
+                        <!-- <span class="periodo" id="periodo">AM</span> -->
+                    </div>
+                </div>
+            </div>    
+                <h1>Crie sua Etiqueta</h1>
             <div class="form-group">
                 <label for="productName">Nome do Produto:</label>
                 <input type="text" id="productName" name="productName" placeholder="Digite o nome do produto" autofocus oninput="this.value = this.value.toUpperCase() "> <!-- Força letras maiúsculas ao digitar -->
@@ -31,7 +44,7 @@
             
             <button onclick="printInfo()">Imprimir</button>
             
-            <div class="calculadora">Clique <a style="text-decoration: NONE; color: #c8ddff;" href="cal.html" rel="next" target="_self" >Aqui
+            <div class="calculadora">Clique <a style="text-decoration: NONE; color: #c8ddff;" href="../page/cal.html" rel="next" target="_self" >Aqui
             </a> para Calculadora</div>
             
             <h3 id="projeto">Feito com 
@@ -45,7 +58,8 @@
                 
                 
                 
-                <script src="script.js"></script>
+                <script src="/script/script.js"></script>
+                <script src="../script/time.js"></script>
                 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
                 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
             </body>
