@@ -92,8 +92,9 @@ button:active {
 }
 
 textarea {
-    max-width: 260px;
+    /*max-width: 260px;
     max-height: 50px;
+    */
     min-width: 260px;
     min-height: 50px;
     margin-top: 5px;
